@@ -47,6 +47,7 @@ The application is structured into modular dashboards, keeping data layouts eleg
 *   **Typing System**: TypeScript (Strong compiler boundaries)
 *   **Styling Engine**: Tailwind CSS (Optimized CSS builds)
 *   **Choreography**: motion/react (Smooth micro-transitions)
+*   **Safe Sandbox Storage**: Custom memory-fallback `safeStorage` driver for fully-isolated sandboxed environments
 *   **Icon Elements**: Lucide React (Clean, vector-accurate visual cues)
 
 ---
@@ -90,4 +91,5 @@ npm run build
 This project demonstrates the execution of **highly rigorous enterprise standards** on the frontend:
 *   **Mathematical Coherence**: Data is not simply randomized placeholder values. All components feed from a logically synchronized dataset modeled after actual corporate workflows (e.g., quarterly revenue mapping seamlessly into localized weekly values, contract totals matching client directory weights).
 *   **Modular Architecture**: Fully divided components (`AnalyticsView`, `CustomersView`, `DashboardView`, `InventoryView`, `OrdersView`, `SettingsView`) ensure clean vertical scaling and prevent infinite component re-renders.
+*   **Robust Sandbox & Iframe Resiliency**: Replaced standard direct `localStorage` access across all modules with a thread-safe, memory-backed storage provider (`safeStorage`) and hardened layout query engines (such as wrapping standard `matchMedia` queries). This ensures zero runtime script exceptions or SecurityError crashes when rendered within strict iframe containers or browser sandbox contexts.
 *   **Sleek Typography & Aesthetics**: Optimized spacing, customized text tracking (`tracking-tight`), and human-centric labels override classic generic layouts to deliver modern product designs suitable for premium SaaS products.
