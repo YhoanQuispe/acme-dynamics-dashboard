@@ -1,0 +1,8 @@
+{
+  "name": "Enterprise Shell Layout",
+  "description": "A highly polished, responsive Shell Layout for a modern Enterprise Management System (ERP/CRM) featuring collapsable sidebar, theme switching, search and a clean Zinc/Slate theme.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
