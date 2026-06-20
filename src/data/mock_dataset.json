@@ -1,0 +1,115 @@
+{
+  "main_dashboard": {
+    "weekly_revenue": 95384.62,
+    "orders_in_queue": 45,
+    "weekly_fulfillment_rate": 95.5,
+    "warehouse_capacities": {
+      "US_East": "78%",
+      "US_West": "64%",
+      "EU_Central": "82%"
+    }
+  },
+  "analytics_platform": {
+    "quarterly_revenue": 1240000.00,
+    "perfect_order_rate": 96.82,
+    "average_dispatch_time": "14.5 hours"
+  },
+  "orders_registry": {
+    "active_bookings_volume": 120000.00,
+    "fulfillment_success_metric": 96.2,
+    "order_list_sample_from_ORD_2026_001_to_010": [
+      {
+        "order_id": "ORD_2026_001",
+        "customer": "TechFlow Inc",
+        "date": "2026-06-01",
+        "amount": 12400.00,
+        "status": "Delivered"
+      },
+      {
+        "order_id": "ORD_2026_002",
+        "customer": "Global Industries",
+        "date": "2026-06-02",
+        "amount": 25000.00,
+        "status": "Processing"
+      },
+      {
+        "order_id": "ORD_2026_003",
+        "customer": "Stark Logistics",
+        "date": "2026-06-03",
+        "amount": 8900.50,
+        "status": "Shipped"
+      },
+      {
+        "order_id": "ORD_2026_004",
+        "customer": "Nova Dynamics",
+        "date": "2026-06-04",
+        "amount": 15600.00,
+        "status": "Pending"
+      },
+      {
+        "order_id": "ORD_2026_005",
+        "customer": "Apex Manufacturing",
+        "date": "2026-06-05",
+        "amount": 32000.00,
+        "status": "Processing"
+      },
+      {
+        "order_id": "ORD_2026_006",
+        "customer": "Nexus Corp",
+        "date": "2026-06-06",
+        "amount": 5400.00,
+        "status": "Delivered"
+      },
+      {
+        "order_id": "ORD_2026_007",
+        "customer": "Quantum Services",
+        "date": "2026-06-07",
+        "amount": 11200.75,
+        "status": "Shipped"
+      },
+      {
+        "order_id": "ORD_2026_008",
+        "customer": "Horizon Holdings",
+        "date": "2026-06-08",
+        "amount": 7800.00,
+        "status": "Pending"
+      },
+      {
+        "order_id": "ORD_2026_009",
+        "customer": "Silverline Tech",
+        "date": "2026-06-09",
+        "amount": 9500.25,
+        "status": "Delivered"
+      },
+      {
+        "order_id": "ORD_2026_010",
+        "customer": "Omega Systems",
+        "date": "2026-06-10",
+        "amount": 17800.00,
+        "status": "Processing"
+      }
+    ]
+  },
+  "customer_directory": {
+    "core_accounts_count": 6,
+    "retention_rate": 98.7,
+    "total_managed_value": 1450000.00
+  },
+  "inventory_catalog": {
+    "item_specifications": {
+      "industrial_servers": "Rack-mounted, 1U, Dual Gen-4 Processors",
+      "network_switches": "48-port, 10GbE, L3 Managed",
+      "power_units": "Standard ATX, 1200W, Titanium Rated"
+    },
+    "unit_pricing": {
+      "industrial_servers": 4500.00,
+      "network_switches": 1200.00,
+      "power_units": 350.00
+    },
+    "stock_levels": {
+      "industrial_servers": 340,
+      "network_switches": 890,
+      "power_units": 1500
+    }
+  }
+}
