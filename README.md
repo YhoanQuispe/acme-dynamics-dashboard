@@ -1,4 +1,5 @@
 # Acme Dynamics — Enterprise Operations Management System
+[![Code Quality Check](https://github.com/YhoanQuispe/acme-dynamics-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/YhoanQuispe/acme-dynamics-dashboard/actions)
 
 An exquisite, high-performance, single-screen B2B Enterprise Resource Planning (ERP) dashboard tailored for high-density operations management and system-wide telemetry synchronization. Built with **React 19**, **Vite**, **TypeScript**, and styled with custom **Tailwind CSS** transitions under **motion** kinetic animations.
 
