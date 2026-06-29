@@ -93,14 +93,14 @@ export interface Order {
   fulfillmentStatus: 'Shipped' | 'Pending' | 'Processing' | 'Cancelled' | 'Delivered';
 }
 
-export type SubscriptionTier = 'Free' | 'Basic' | 'Premium' | 'Enterprise' | string;
+export type SubscriptionTier = string;
 
 export interface Ticket {
   id: string;
   title: string;
   description: string;
-  status: string;
-  priority: string;
+  status: any;
+  priority: any;
   createdAt: string;
   updatedAt: string;
   assignedTo?: string;
@@ -115,12 +115,12 @@ export interface UserCRMProfile {
   userId?: string;
   firstName?: string;
   lastName?: string;
-  name: string;
+  name?: string;
   email: string;
   phoneNumber?: string;
   company?: string;
-  subscriptionTier?: SubscriptionTier;
-  tier?: SubscriptionTier;
+  subscriptionTier?: any;
+  tier?: any;
   status?: string;
   avatarUrl?: string;
   createdAt: string;
@@ -131,21 +131,21 @@ export interface TelemetryLog {
   id: string;
   timestamp: string;
   deviceId?: string;
-  component?: string;
   eventType?: string;
-  level?: string;
-  message?: string;
   metrics?: Record<string, any>;
+  status?: any;
+  level?: string;
+  component?: string;
+  message?: string;
   meta?: Record<string, any>;
-  status?: string;
 }
 
 export interface Message {
   id: string;
   sessionId?: string;
   senderId?: string;
-  senderType?: string;
-  sender: string;
+  senderType?: any;
+  sender?: any;
   content: string;
   timestamp: string;
   isRead?: boolean;
@@ -156,21 +156,20 @@ export interface SupportSession {
   ticketId?: string;
   customerId?: string;
   agentId?: string;
-  status: string;
+  status: any;
   startTime?: string;
   endTime?: string;
   startedAt?: string;
   lastActivityAt?: string;
   messages: Message[];
-  activeTicket?: Ticket | null;
-  user?: UserCRMProfile;
+  activeTicket?: any;
+  user?: any;
   deviceInfo?: string;
 }
 
 export interface KnowledgeBaseArticle {
   id: string;
   title: string;
-  slug?: string;
   content: string;
   category: string;
   tags: string[];
@@ -178,5 +177,6 @@ export interface KnowledgeBaseArticle {
   publishedAt?: string;
   updatedAt: string;
   views: number;
+  slug?: string;
   helpfulVotes?: number;
 }
