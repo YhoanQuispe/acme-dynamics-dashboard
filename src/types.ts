@@ -93,66 +93,90 @@ export interface Order {
   fulfillmentStatus: 'Shipped' | 'Pending' | 'Processing' | 'Cancelled' | 'Delivered';
 }
 
-export type SubscriptionTier = 'Free' | 'Pro' | 'Enterprise' | string;
-
-export interface UserCRMProfile {
-  id: string;
-  name: string;
-  email: string;
-  company: string;
-  tier: SubscriptionTier;
-  status: 'active' | 'inactive';
-  avatarUrl?: string;
-  createdAt: string;
-}
-
-export interface Message {
-  id: string;
-  sender: 'user' | 'agent' | 'system';
-  content: string;
-  timestamp: string;
-}
+export type SubscriptionTier = 'Free' | 'Basic' | 'Premium' | 'Enterprise' | string;
 
 export interface Ticket {
   id: string;
   title: string;
-  description?: string;
-  status: 'open' | 'in_progress' | 'resolved' | 'closed';
-  priority: 'low' | 'medium' | 'high' | 'urgent';
-  category: string;
-  user?: UserCRMProfile;
-  messages?: Message[];
+  description: string;
+  status: string;
+  priority: string;
   createdAt: string;
   updatedAt: string;
+  assignedTo?: string;
+  customerId?: string;
+  category?: string;
+  user?: any;
+  messages?: any[];
+}
+
+export interface UserCRMProfile {
+  id: string;
+  userId?: string;
+  firstName?: string;
+  lastName?: string;
+  name: string;
+  email: string;
+  phoneNumber?: string;
+  company?: string;
+  subscriptionTier?: SubscriptionTier;
+  tier?: SubscriptionTier;
+  status?: string;
+  avatarUrl?: string;
+  createdAt: string;
+  lastActiveAt?: string;
 }
 
 export interface TelemetryLog {
   id: string;
   timestamp: string;
-  level: 'info' | 'warn' | 'error';
-  component: string;
-  message: string;
+  deviceId?: string;
+  component?: string;
+  eventType?: string;
+  level?: string;
+  message?: string;
+  metrics?: Record<string, any>;
   meta?: Record<string, any>;
+  status?: string;
+}
+
+export interface Message {
+  id: string;
+  sessionId?: string;
+  senderId?: string;
+  senderType?: string;
+  sender: string;
+  content: string;
+  timestamp: string;
+  isRead?: boolean;
 }
 
 export interface SupportSession {
   id: string;
-  status: 'active' | 'idle' | 'closed';
-  user: UserCRMProfile;
-  startedAt: string;
-  lastActivityAt: string;
+  ticketId?: string;
+  customerId?: string;
+  agentId?: string;
+  status: string;
+  startTime?: string;
+  endTime?: string;
+  startedAt?: string;
+  lastActivityAt?: string;
   messages: Message[];
+  activeTicket?: Ticket | null;
+  user?: UserCRMProfile;
   deviceInfo?: string;
 }
 
 export interface KnowledgeBaseArticle {
   id: string;
   title: string;
-  slug: string;
+  slug?: string;
   content: string;
   category: string;
-  views: number;
-  helpfulVotes: number;
   tags: string[];
+  authorId?: string;
+  publishedAt?: string;
   updatedAt: string;
+  views: number;
+  helpfulVotes?: number;
 }
