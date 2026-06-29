@@ -93,5 +93,74 @@ export interface Order {
   fulfillmentStatus: 'Shipped' | 'Pending' | 'Processing' | 'Cancelled' | 'Delivered';
 }
 
+export type SubscriptionTier = 'Free' | 'Basic' | 'Premium' | 'Enterprise';
+
+export interface Ticket {
+  id: string;
+  title: string;
+  description: string;
+  status: 'Open' | 'In Progress' | 'Resolved' | 'Closed';
+  priority: 'Low' | 'Medium' | 'High' | 'Critical';
+  createdAt: string;
+  updatedAt: string;
+  assignedTo?: string;
+  customerId: string;
+}
+
+export interface UserCRMProfile {
+  id: string;
+  userId: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber?: string;
+  company?: string;
+  subscriptionTier: SubscriptionTier;
+  createdAt: string;
+  lastActiveAt: string;
+}
+
+export interface TelemetryLog {
+  id: string;
+  timestamp: string;
+  deviceId: string;
+  eventType: string;
+  metrics: Record<string, any>;
+  status: 'Success' | 'Warning' | 'Error';
+}
+
+export interface Message {
+  id: string;
+  sessionId: string;
+  senderId: string;
+  senderType: 'User' | 'Agent' | 'System';
+  content: string;
+  timestamp: string;
+  isRead: boolean;
+}
+
+export interface SupportSession {
+  id: string;
+  ticketId?: string;
+  customerId: string;
+  agentId?: string;
+  status: 'Active' | 'Waiting' | 'Ended';
+  startTime: string;
+  endTime?: string;
+  messages: Message[];
+}
+
+export interface KnowledgeBaseArticle {
+  id: string;
+  title: string;
+  content: string;
+  category: string;
+  tags: string[];
+  authorId: string;
+  publishedAt: string;
+  updatedAt: string;
+  views: number;
+}
+
 
 
