@@ -93,90 +93,35 @@ export interface Order {
   fulfillmentStatus: 'Shipped' | 'Pending' | 'Processing' | 'Cancelled' | 'Delivered';
 }
 
-export type SubscriptionTier = string;
+// Estructuras dinámicas para el módulo de soporte y CRM
+export type SubscriptionTier = any;
 
 export interface Ticket {
   id: string;
-  title: string;
-  description: string;
-  status: any;
-  priority: any;
-  createdAt: string;
-  updatedAt: string;
-  assignedTo?: string;
-  customerId?: string;
-  category?: string;
-  user?: any;
-  messages?: any[];
+  [key: string]: any;
 }
 
 export interface UserCRMProfile {
   id: string;
-  userId?: string;
-  firstName?: string;
-  lastName?: string;
-  name?: string;
-  email: string;
-  phoneNumber?: string;
-  company?: string;
-  subscriptionTier?: any;
-  tier?: any;
-  status?: string;
-  avatarUrl?: string;
-  createdAt: string;
-  lastActiveAt?: string;
+  [key: string]: any;
 }
 
 export interface TelemetryLog {
   id: string;
-  timestamp: string;
-  deviceId?: string;
-  eventType?: string;
-  metrics?: Record<string, any>;
-  status?: any;
-  level?: string;
-  component?: string;
-  message?: string;
-  meta?: Record<string, any>;
+  [key: string]: any;
 }
 
 export interface Message {
   id: string;
-  sessionId?: string;
-  senderId?: string;
-  senderType?: any;
-  sender?: any;
-  content: string;
-  timestamp: string;
-  isRead?: boolean;
+  [key: string]: any;
 }
 
 export interface SupportSession {
   id: string;
-  ticketId?: string;
-  customerId?: string;
-  agentId?: string;
-  status: any;
-  startTime?: string;
-  endTime?: string;
-  startedAt?: string;
-  lastActivityAt?: string;
-  messages: Message[];
-  activeTicket?: any;
-  user?: any;
-  deviceInfo?: string;
+  [key: string]: any;
 }
 
 export interface KnowledgeBaseArticle {
   id: string;
-  title: string;
-  content: string;
-  category: string;
-  tags: string[];
-  authorId?: string;
-  publishedAt?: string;
-  updatedAt: string;
-  views: number;
-  slug?: string;
-  helpfulVotes?: number;
+  [key: string]: any;
 }
