@@ -689,9 +689,9 @@ export default function App() {
 
             <div 
               onClick={() => searchInputRef.current?.focus()}
-              className="relative w-full max-w-lg hidden sm:block cursor-text group"
+              className="relative w-full max-w-lg hidden sm:flex items-center cursor-text group"
             >
-              <Search className="absolute left-3 top-2.5 h-4 w-4 text-zinc-400 dark:text-zinc-500 cursor-text group-hover:text-indigo-500 transition-colors duration-200" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-400 dark:text-zinc-500 cursor-text group-hover:text-indigo-500 transition-colors duration-200" />
               <input
                 ref={searchInputRef}
                 type="text"
@@ -705,7 +705,7 @@ export default function App() {
                 }}
                 className="w-full pl-9 pr-12 py-1.5 text-xs rounded-lg border border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-50/50 dark:bg-zinc-900/50 text-zinc-900 dark:text-zinc-50 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 dark:focus:ring-indigo-400/50 placeholder-zinc-400 font-sans cursor-text transition-all duration-200 ease-in-out"
               />
-              <div className="absolute right-2 top-2 flex items-center gap-1 pointer-events-none">
+              <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1 pointer-events-none">
                 <span className="flex items-center justify-center px-1.5 py-0.5 rounded border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-[10px] font-mono font-medium text-zinc-400 dark:text-zinc-500">
                   ⌘K
                 </span>
