@@ -1,166 +1,137 @@
 import { ComponentType } from 'react';
 
 export interface NavigationItem {
-  id: string;
-  name: string;
-  iconName: string; // Dynamic Lucide icon reference or Lucide ComponentType
+  id?: string;
+  name?: string;
+  iconName?: string;
   label?: string;
+  [key: string]: any;
 }
 
 export interface User {
-  name: string;
-  email: string;
-  avatarUrl: string;
-  role: string;
-  status: 'online' | 'away' | 'offline';
+  name?: string;
+  email?: string;
+  avatarUrl?: string;
+  role?: string;
+  status?: any;
+  [key: string]: any;
 }
 
 export interface NotificationItem {
-  id: string;
-  title: string;
-  description: string;
-  timestamp: string;
-  unread: boolean;
-  type: 'info' | 'success' | 'warning' | 'error';
+  id?: string;
+  title?: string;
+  description?: string;
+  timestamp?: string;
+  unread?: boolean;
+  type?: any;
+  [key: string]: any;
 }
 
 export interface Project {
-  id: string;
-  name: string;
-  status: 'In Progress' | 'Completed' | 'On Hold' | 'Archived';
-  progress: number;
-  manager: string;
-  budget: string;
-  dueDate: string;
-  blueprintClassType: string;
-  targetDeploymentTier: string;
+  id?: string;
+  name?: string;
+  status?: any;
+  progress?: number;
+  manager?: string;
+  budget?: string;
+  dueDate?: string;
+  blueprintClassType?: string;
+  targetDeploymentTier?: string;
   isBlueprint?: boolean;
+  [key: string]: any;
 }
 
 export interface Customer {
-  id: string;
-  name: string;
-  company: string;
-  email: string;
-  spent: string;
-  status: 'Active' | 'Inactive';
+  id?: string;
+  name?: string;
+  company?: string;
+  email?: string;
+  spent?: string;
+  status?: any;
   tier?: string;
+  [key: string]: any;
 }
 
 export interface InventoryItem {
-  id: string;
-  name: string;
-  sku: string;
-  stock: number;
-  price: string;
-  status: 'In Stock' | 'Low Stock' | 'Out of Stock' | 'In Transit';
+  id?: string;
+  name?: string;
+  sku?: string;
+  stock?: number;
+  price?: string;
+  status?: any;
   supplier?: string;
+  [key: string]: any;
 }
 
 export interface Blueprint {
-  id: string;
-  name: string;
-  blueprintClassType: string;
-  targetDeploymentTier: string;
-  createdAt: string;
+  id?: string;
+  name?: string;
+  blueprintClassType?: string;
+  targetDeploymentTier?: string;
+  createdAt?: string;
+  [key: string]: any;
 }
 
 export interface AuditLog {
-  id: string;
-  timestamp: string;
-  eventId: string;
-  severity: 'Critical' | 'Warning' | 'Info';
-  description: string;
+  id?: string;
+  timestamp?: string;
+  eventId?: string;
+  severity?: any;
+  description?: string;
+  [key: string]: any;
 }
 
 export interface OperatorProfile {
-  name: string;
-  email: string;
+  name?: string;
+  email?: string;
+  [key: string]: any;
 }
 
 export interface AlertSettings {
-  systemAlerts: boolean;
-  securityAlerts: boolean;
+  systemAlerts?: boolean;
+  securityAlerts?: boolean;
   onUpdateAlertSettings?: (settings: AlertSettings) => void;
-  billingAlerts: boolean;
+  billingAlerts?: boolean;
+  [key: string]: any;
 }
 
 export interface Order {
-  id: string;
-  customer: string;
-  orderDate: string;
-  totalAmount: string;
-  fulfillmentStatus: 'Shipped' | 'Pending' | 'Processing' | 'Cancelled' | 'Delivered';
+  id?: string;
+  customer?: string;
+  orderDate?: string;
+  totalAmount?: string;
+  fulfillmentStatus?: any;
+  [key: string]: any;
 }
 
-export type SubscriptionTier = 'Free' | 'Basic' | 'Premium' | 'Enterprise';
+export type SubscriptionTier = any;
 
 export interface Ticket {
-  id: string;
-  title: string;
-  description: string;
-  status: 'Open' | 'In Progress' | 'Resolved' | 'Closed';
-  priority: 'Low' | 'Medium' | 'High' | 'Critical';
-  createdAt: string;
-  updatedAt: string;
-  assignedTo?: string;
-  customerId: string;
+  id?: string;
+  [key: string]: any;
 }
 
 export interface UserCRMProfile {
-  id: string;
-  userId: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  phoneNumber?: string;
-  company?: string;
-  subscriptionTier: SubscriptionTier;
-  createdAt: string;
-  lastActiveAt: string;
+  id?: string;
+  [key: string]: any;
 }
 
 export interface TelemetryLog {
-  id: string;
-  timestamp: string;
-  deviceId: string;
-  eventType: string;
-  metrics: Record<string, any>;
-  status: 'Success' | 'Warning' | 'Error';
+  id?: string;
+  [key: string]: any;
 }
 
 export interface Message {
-  id: string;
-  sessionId: string;
-  senderId: string;
-  senderType: 'User' | 'Agent' | 'System';
-  content: string;
-  timestamp: string;
-  isRead: boolean;
+  id?: string;
+  [key: string]: any;
 }
 
 export interface SupportSession {
-  id: string;
-  ticketId?: string;
-  customerId: string;
-  agentId?: string;
-  status: 'Active' | 'Waiting' | 'Ended';
-  startTime: string;
-  endTime?: string;
-  messages: Message[];
+  id?: string;
+  [key: string]: any;
 }
 
 export interface KnowledgeBaseArticle {
-  id: string;
-  title: string;
-  content: string;
-  category: string;
-  tags: string[];
-  authorId: string;
-  publishedAt: string;
-  updatedAt: string;
-  views: number;
+  id?: string;
+  [key: string]: any;
 }
-
-
-
